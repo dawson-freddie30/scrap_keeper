@@ -54,8 +54,8 @@ Func _DoGUI()
    GUICtrlCreateLabel("GiftHulk", 233, 166, 42, 17)
    $USER_GiftHulk = GUICtrlCreateInput($USER_GiftHulk, 249, 190, 169, 21)
    $PASS_GiftHulk = GUICtrlCreateInput($PASS_GiftHulk, 249, 214, 169, 21)
-   GUICtrlCreateLabel("reset every x hours", 8, 272, 93, 17)
-   $DELAY = GUICtrlCreateInput($DELAY, 16, 288, 41, 21)
+   GUICtrlCreateLabel("Reset every X hours", 8, 263, 108, 17)
+   $DELAY = GUICtrlCreateInput($DELAY, 16, 280, 41, 21)
    GUISetState(@SW_SHOW)
 
    While 1
