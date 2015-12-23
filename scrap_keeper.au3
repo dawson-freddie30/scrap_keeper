@@ -171,7 +171,7 @@ Func _Reset()
    Until $WIN <> 0
 EndFunc
 
-Func _SendDelayed($delay, $keys)
+Func _SendDelayed($delay, $keys, $raw = 0)
    While WinActive($WIN) = 0
 	  If WinExists($WIN) = 0 Then Return
 
@@ -180,15 +180,15 @@ Func _SendDelayed($delay, $keys)
    WEnd
 
    AutoItSetOption('SendKeyDelay', $delay)
-   Send($keys)
+   Send($keys, $raw)
 EndFunc
 
 Func _SendLogin($user, $pass)
    If $user <> '' And $pass <> '' Then
 	  _SendDelayed(500, '{TAB}')
-	  _SendDelayed(10, $user)
+	  _SendDelayed(10, $user, 1)
 	  _SendDelayed(500, '{TAB}')
-	  _SendDelayed(10, $pass)
+	  _SendDelayed(10, $pass, 1)
 	  ;_SendDelayed(500, '{TAB}')
 	  _SendDelayed(500, '{TAB}{ENTER}')
 	  Sleep(3000)
