@@ -64,7 +64,7 @@ Func _DoGUI()
 	  Case $buttonGo
 			$DELAY = GUICtrlRead($DELAY)
 
-			_WriteLogin('ZoomBucks', $_check_SwagBucks)
+			_WriteLogin('ZoomBucks', $_check_ZoomBucks)
 			_WriteLogin('SwagBucks', $_check_SwagBucks)
 			_WriteLogin('PrizeRebel', $_check_PrizeRebel)
 			_WriteLogin('PaidVert', $_check_PaidVert)
@@ -177,9 +177,12 @@ Func _SendLogin($section)
 	  _SendDelayed(500, '{TAB}')
 	  _SendDelayed(10, $pass, 1)
 	  ;_SendDelayed(500, '{TAB}')
-	  _SendDelayed(500, '{TAB}{ENTER}')
+	  _SendDelayed(250, '{TAB}')
+	  _SendDelayed(250, '{ENTER}')
 	  Sleep(3000)
-	  _SendDelayed(500, '+{TAB 3}')
+	  _SendDelayed(250, '+{TAB}')
+	  _SendDelayed(250, '+{TAB}')
+	  _SendDelayed(250, '+{TAB}')
    EndIf
 
    _SendDelayed(500, '{RIGHT}')
