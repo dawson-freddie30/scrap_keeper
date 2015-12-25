@@ -17,79 +17,63 @@ Global $WIN
 Global $TIMER = 0
 
 Global $DELAY = IniRead($INI, 'settings', 'delay', '1.5')
-Global $USER_ZoomBucks, $PASS_ZoomBucks
-Global $USER_SwagBucks, $PASS_SwagBucks
-Global $USER_PrizeRebel, $PASS_PrizeRebel
-Global $USER_PaidVert, $PASS_PaidVert
-Global $USER_iRazoo, $PASS_iRazoo
-Global $USER_GiftHulk, $PASS_GiftHulk
 
-_ReadLogin($USER_ZoomBucks, $PASS_ZoomBucks, 'ZoomBucks')
-_ReadLogin($USER_SwagBucks, $PASS_SwagBucks, 'SwagBucks')
-_ReadLogin($USER_PrizeRebel, $PASS_PrizeRebel, 'PrizeRebel')
-_ReadLogin($USER_PaidVert, $PASS_PaidVert, 'PaidVert')
-_ReadLogin($USER_iRazoo, $PASS_iRazoo, 'iRazoo')
-_ReadLogin($USER_GiftHulk, $PASS_GiftHulk, 'GiftHulk')
+_ReadLogin('ZoomBucks')
+_ReadLogin('SwagBucks')
+_ReadLogin('PrizeRebel')
+_ReadLogin('PaidVert')
+_ReadLogin('iRazoo')
+_ReadLogin('GiftHulk')
 
 _DoGUI()
 
 Func _DoGUI()
-   Local $gui = GUICreate("Scrap Keeper", 432, 311, 314, 216)
-   Local $buttonGo = GUICtrlCreateButton("Go", 296, 272, 75, 25)
-   GUICtrlCreateLabel("ZoomBucks", 11, 6, 61, 17)
-   $USER_ZoomBucks = GUICtrlCreateInput($USER_ZoomBucks, 19, 30, 177, 21)
-   $PASS_ZoomBucks = GUICtrlCreateInput($PASS_ZoomBucks, 19, 54, 177, 21)
-   GUICtrlCreateLabel("Swagbucks", 8, 88, 60, 17)
+   Local $gui = GUICreate("Scrap Keeper", 432, 328, 212, 150)
+   Local $buttonGo = GUICtrlCreateButton("Go", 288, 280, 75, 25)
+   Local $_check_ZoomBucks = GUICtrlCreateCheckbox("ZoomBucks", 8, 8, 121, 17)
+   $USER_ZoomBucks = GUICtrlCreateInput($USER_ZoomBucks, 24, 32, 177, 21)
+   $PASS_ZoomBucks = GUICtrlCreateInput($PASS_ZoomBucks, 24, 56, 177, 21)
+   Local $_check_SwagBucks = GUICtrlCreateCheckbox("SwagBucks", 8, 88, 121, 17)
    $USER_SwagBucks = GUICtrlCreateInput($USER_SwagBucks, 24, 112, 169, 21)
    $PASS_SwagBucks = GUICtrlCreateInput($PASS_SwagBucks, 24, 136, 169, 21)
-   GUICtrlCreateLabel("PrizeRebel", 11, 166, 55, 17)
-   $USER_PrizeRebel = GUICtrlCreateInput($USER_PrizeRebel, 19, 190, 169, 21)
-   $PASS_PrizeRebel = GUICtrlCreateInput($PASS_PrizeRebel, 19, 214, 169, 21)
-   GUICtrlCreateLabel("PaidVert", 233, 6, 44, 17)
-   $USER_PaidVert = GUICtrlCreateInput($USER_PaidVert, 249, 30, 169, 21)
-   $PASS_PaidVert = GUICtrlCreateInput($PASS_PaidVert, 249, 54, 169, 21)
-   GUICtrlCreateLabel("iRazoo", 233, 86, 37, 17)
-   $USER_iRazoo = GUICtrlCreateInput($USER_iRazoo, 249, 110, 169, 21)
-   $PASS_iRazoo = GUICtrlCreateInput($PASS_iRazoo, 249, 134, 169, 21)
-   GUICtrlCreateLabel("GiftHulk", 233, 166, 42, 17)
-   $USER_GiftHulk = GUICtrlCreateInput($USER_GiftHulk, 249, 190, 169, 21)
-   $PASS_GiftHulk = GUICtrlCreateInput($PASS_GiftHulk, 249, 214, 169, 21)
-   GUICtrlCreateLabel("Reset every X hours", 8, 263, 108, 17)
-   $DELAY = GUICtrlCreateInput($DELAY, 16, 280, 41, 21)
+   Local $_check_PrizeRebel = GUICtrlCreateCheckbox("PrizeRebel", 8, 168, 121, 17)
+   $USER_PrizeRebel = GUICtrlCreateInput($USER_PrizeRebel, 24, 192, 169, 21)
+   $PASS_PrizeRebel = GUICtrlCreateInput($PASS_PrizeRebel, 24, 216, 169, 21)
+   Local $_check_PaidVert = GUICtrlCreateCheckbox("PaidVert", 232, 8, 121, 17)
+   $USER_PaidVert = GUICtrlCreateInput($USER_PaidVert, 248, 32, 169, 21)
+   $PASS_PaidVert = GUICtrlCreateInput($PASS_PaidVert, 248, 56, 169, 21)
+   Local $_check_iRazoo = GUICtrlCreateCheckbox("iRazoo", 232, 88, 121, 17)
+   $USER_iRazoo = GUICtrlCreateInput($USER_iRazoo, 248, 112, 169, 21)
+   $PASS_iRazoo = GUICtrlCreateInput($PASS_iRazoo, 248, 136, 169, 21)
+   Local $_check_GiftHulk = GUICtrlCreateCheckbox("GiftHulk", 232, 168, 121, 17)
+   $USER_GiftHulk = GUICtrlCreateInput($USER_GiftHulk, 248, 192, 169, 21)
+   $PASS_GiftHulk = GUICtrlCreateInput($PASS_GiftHulk, 248, 216, 169, 21)
+   GUICtrlCreateLabel("Reset every X hours", 24, 264, 132, 17)
+   $DELAY = GUICtrlCreateInput($DELAY, 24, 288, 41, 21)
    GUISetState(@SW_SHOW)
+
+   GuiCtrlSetState($_check_ZoomBucks, $CHECK_ZoomBucks)
+   GuiCtrlSetState($_check_SwagBucks, $CHECK_SwagBucks)
+   GuiCtrlSetState($_check_PrizeRebel, $CHECK_PrizeRebel)
+   GuiCtrlSetState($_check_PaidVert, $CHECK_PaidVert)
+   GuiCtrlSetState($_check_iRazoo, $CHECK_iRazoo)
+   GuiCtrlSetState($_check_GiftHulk, $CHECK_GiftHulk)
 
    While 1
 	  Switch GUIGetMsg()
-		 Case $buttonGo
-			$USER_ZoomBucks = GUICtrlRead($USER_ZoomBucks)
-			$PASS_ZoomBucks = GUICtrlRead($PASS_ZoomBucks)
-
-			$USER_SwagBucks = GUICtrlRead($USER_SwagBucks)
-			$PASS_SwagBucks = GUICtrlRead($PASS_SwagBucks)
-
-			$USER_PrizeRebel = GUICtrlRead($USER_PrizeRebel)
-			$PASS_PrizeRebel = GUICtrlRead($PASS_PrizeRebel)
-
-			$USER_PaidVert = GUICtrlRead($USER_PaidVert)
-			$PASS_PaidVert = GUICtrlRead($PASS_PaidVert)
-
-			$USER_iRazoo = GUICtrlRead($USER_iRazoo)
-			$PASS_iRazoo = GUICtrlRead($PASS_iRazoo)
-
-			$USER_GiftHulk = GUICtrlRead($USER_GiftHulk)
-			$PASS_GiftHulk = GUICtrlRead($PASS_GiftHulk)
-
+	  Case $buttonGo
 			$DELAY = GUICtrlRead($DELAY)
 
-			GUIDelete()
+			_WriteLogin('ZoomBucks', $_check_SwagBucks)
+			_WriteLogin('SwagBucks', $_check_SwagBucks)
+			_WriteLogin('PrizeRebel', $_check_PrizeRebel)
+			_WriteLogin('PaidVert', $_check_PaidVert)
+			_WriteLogin('iRazoo', $_check_iRazoo)
+			_WriteLogin('GiftHulk', $_check_GiftHulk)
 
-			_WriteLogin($USER_ZoomBucks, $PASS_ZoomBucks, 'ZoomBucks')
-			_WriteLogin($USER_SwagBucks, $PASS_SwagBucks, 'SwagBucks')
-			_WriteLogin($USER_PrizeRebel, $PASS_PrizeRebel, 'PrizeRebel')
-			_WriteLogin($USER_PaidVert, $PASS_PaidVert, 'PaidVert')
-			_WriteLogin($USER_iRazoo, $PASS_iRazoo, 'iRazoo')
-			_WriteLogin($USER_GiftHulk, $PASS_GiftHulk, 'GiftHulk')
 			IniWrite($INI, 'settings', 'delay', $DELAY)
+
+			GUIDelete()
 
 			_Keep()
 		 Case $GUI_EVENT_CLOSE
@@ -157,12 +141,12 @@ Func _Reset()
 		 ContinueLoop
 	  EndIf
 
-	  _SendLogin($USER_ZoomBucks, $PASS_ZoomBucks)
-	  _SendLogin($USER_SwagBucks, $PASS_SwagBucks)
-	  _SendLogin($USER_PrizeRebel, $PASS_PrizeRebel)
-	  _SendLogin($USER_PaidVert, $PASS_PaidVert)
-	  _SendLogin($USER_iRazoo, $PASS_iRazoo)
-	  _SendLogin($USER_GiftHulk, $PASS_GiftHulk)
+	  _SendLogin('ZoomBucks')
+	  _SendLogin('SwagBucks')
+	  _SendLogin('PrizeRebel')
+	  _SendLogin('PaidVert')
+	  _SendLogin('iRazoo')
+	  _SendLogin('GiftHulk')
 
 	  WinSetOnTop($WIN, '', 0)
 	  BlockInput(0)
@@ -183,8 +167,11 @@ Func _SendDelayed($delay, $keys, $raw = 0)
    Send($keys, $raw)
 EndFunc
 
-Func _SendLogin($user, $pass)
-   If $user <> '' And $pass <> '' Then
+Func _SendLogin($section)
+   Local $user = Eval('USER_' & $section)
+   Local $pass = Eval('PASS_' & $section)
+
+   If Eval('CHECK_' & $section) = $GUI_CHECKED And $user <> '' And $pass <> '' Then
 	  _SendDelayed(500, '{TAB}')
 	  _SendDelayed(10, $user, 1)
 	  _SendDelayed(500, '{TAB}')
@@ -218,14 +205,20 @@ Func _Seconds2Time($seconds)
    Return StringFormat('%02d:%02d:%02d', $hours, $minutes, $seconds)
 EndFunc
 
-Func _ReadLogin(ByRef $user, ByRef $pass, $section)
-   $user = IniRead($INI, $section, 'user', '')
-   $pass = IniRead($INI, $section, 'pass', '')
+Func _ReadLogin($section)
+   Assign('CHECK_' & $section, IniRead($INI, $section, 'check', $GUI_CHECKED), 2)
+   Assign('USER_' & $section, IniRead($INI, $section, 'user', ''), 2)
+   Assign('PASS_' & $section, IniRead($INI, $section, 'pass', ''), 2)
 EndFunc
 
-Func _WriteLogin($user, $pass, $section)
-   IniWrite($INI, $section, 'user', $user)
-   IniWrite($INI, $section, 'pass', $pass)
+Func _WriteLogin($section, $checkCtrl)
+   Assign('CHECK_' & $section, GUICtrlRead($checkCtrl), 4)
+   Assign('USER_' & $section, GUICtrlRead(Eval('USER_' & $section)), 4)
+   Assign('PASS_' & $section, GUICtrlRead(Eval('PASS_' & $section)), 4)
+
+   IniWrite($INI, $section, 'check', Eval('CHECK_' & $section))
+   IniWrite($INI, $section, 'user', Eval('USER_' & $section))
+   IniWrite($INI, $section, 'pass', Eval('PASS_' & $section))
 EndFunc
 
 Func _Tray_Exit()

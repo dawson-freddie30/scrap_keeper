@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <object type="TAForm" name="gui">
 	<properties>
-		<property name="Left" vt="Int16">314</property>
-		<property name="Top" vt="Int16">216</property>
+		<property name="Left" vt="Int16">212</property>
+		<property name="Top" vt="Int16">150</property>
 		<property name="Width" vt="Int16">447</property>
-		<property name="Height" vt="Int16">349</property>
+		<property name="Height" vt="Int16">366</property>
 		<property name="Caption" vt="String">Scrap Keeper</property>
 		<property name="Color" vt="Ident">clBtnFace</property>
 		<property name="Font.Charset" vt="Ident">DEFAULT_CHARSET</property>
@@ -24,7 +24,7 @@
 		<property name="FormOptIndentChar" vt="Int8">0</property>
 		<property name="FormOptIndentCount" vt="Int8">1</property>
 		<property name="FormOptIndentInit" vt="Int8">0</property>
-		<property name="FormOptVarScope" vt="Int8">2</property>
+		<property name="FormOptVarScope" vt="Int8">0</property>
 		<property name="Resizing" vt="Set"/>
 		<property name="PixelsPerInch" vt="Int8">96</property>
 		<property name="TextHeight" vt="Int8">13</property>
@@ -32,8 +32,8 @@
 	<components>
 		<object type="TAButton" name="buttonGo">
 			<properties>
-				<property name="Left" vt="Int16">296</property>
-				<property name="Top" vt="Int16">272</property>
+				<property name="Left" vt="Int16">288</property>
+				<property name="Top" vt="Int16">280</property>
 				<property name="Width" vt="Int8">75</property>
 				<property name="Height" vt="Int8">25</property>
 				<property name="Caption" vt="String">Go</property>
@@ -47,24 +47,9 @@
 		</object>
 		<object type="TALabel" name="">
 			<properties>
-				<property name="Left" vt="Int8">8</property>
-				<property name="Top" vt="Int8">88</property>
-				<property name="Width" vt="Int8">60</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">Swagbucks</property>
-				<property name="TabOrder" vt="Int8">4</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int8">8</property>
-				<property name="Top" vt="Int16">263</property>
-				<property name="Width" vt="Int8">108</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int16">264</property>
+				<property name="Width" vt="Int16">132</property>
 				<property name="Height" vt="Int8">17</property>
 				<property name="Caption" vt="String">Reset every X hours</property>
 				<property name="TabOrder" vt="Int8">19</property>
@@ -77,8 +62,8 @@
 		</object>
 		<object type="TAInput" name="DELAY">
 			<properties>
-				<property name="Left" vt="Int8">16</property>
-				<property name="Top" vt="Int16">280</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int16">288</property>
 				<property name="Width" vt="Int8">41</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">20</property>
@@ -117,25 +102,10 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int8">11</property>
-				<property name="Top" vt="Int8">6</property>
-				<property name="Width" vt="Int8">61</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">ZoomBucks</property>
-				<property name="TabOrder" vt="Int8">1</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
 		<object type="TAInput" name="USER_ZoomBucks">
 			<properties>
-				<property name="Left" vt="Int8">19</property>
-				<property name="Top" vt="Int8">30</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int8">32</property>
 				<property name="Width" vt="Int16">177</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">2</property>
@@ -148,8 +118,8 @@
 		</object>
 		<object type="TAInput" name="PASS_ZoomBucks">
 			<properties>
-				<property name="Left" vt="Int8">19</property>
-				<property name="Top" vt="Int8">54</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int8">56</property>
 				<property name="Width" vt="Int16">177</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">3</property>
@@ -160,25 +130,10 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int8">11</property>
-				<property name="Top" vt="Int16">166</property>
-				<property name="Width" vt="Int8">55</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">PrizeRebel</property>
-				<property name="TabOrder" vt="Int8">7</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
 		<object type="TAInput" name="USER_PrizeRebel">
 			<properties>
-				<property name="Left" vt="Int8">19</property>
-				<property name="Top" vt="Int16">190</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int16">192</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">8</property>
@@ -191,8 +146,8 @@
 		</object>
 		<object type="TAInput" name="PASS_PrizeRebel">
 			<properties>
-				<property name="Left" vt="Int8">19</property>
-				<property name="Top" vt="Int16">214</property>
+				<property name="Left" vt="Int8">24</property>
+				<property name="Top" vt="Int16">216</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">9</property>
@@ -203,25 +158,10 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int16">233</property>
-				<property name="Top" vt="Int8">6</property>
-				<property name="Width" vt="Int8">44</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">PaidVert</property>
-				<property name="TabOrder" vt="Int8">10</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
 		<object type="TAInput" name="USER_PaidVert">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int8">30</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int8">32</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">11</property>
@@ -234,8 +174,8 @@
 		</object>
 		<object type="TAInput" name="PASS_PaidVert">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int8">54</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int8">56</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">12</property>
@@ -246,25 +186,10 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int16">233</property>
-				<property name="Top" vt="Int8">86</property>
-				<property name="Width" vt="Int8">37</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">iRazoo</property>
-				<property name="TabOrder" vt="Int8">13</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
 		<object type="TAInput" name="USER_iRazoo">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int8">110</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int8">112</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">14</property>
@@ -277,8 +202,8 @@
 		</object>
 		<object type="TAInput" name="PASS_iRazoo">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int16">134</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int16">136</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">15</property>
@@ -289,25 +214,10 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TALabel" name="">
-			<properties>
-				<property name="Left" vt="Int16">233</property>
-				<property name="Top" vt="Int16">166</property>
-				<property name="Width" vt="Int8">42</property>
-				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">GiftHulk</property>
-				<property name="TabOrder" vt="Int8">16</property>
-				<property name="HaveVariable" vt="False">False</property>
-				<property name="CtrlStyle" vt="Int32">1342308608</property>
-				<property name="CtrlExStyle" vt="Int8">0</property>
-				<property name="Resizing" vt="Set"/>
-			</properties>
-			<components/>
-		</object>
 		<object type="TAInput" name="USER_GiftHulk">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int16">190</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int16">192</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">17</property>
@@ -320,14 +230,98 @@
 		</object>
 		<object type="TAInput" name="PASS_GiftHulk">
 			<properties>
-				<property name="Left" vt="Int16">249</property>
-				<property name="Top" vt="Int16">214</property>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int16">216</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">18</property>
 				<property name="Text" vt="String">PASS_GiftHulk</property>
 				<property name="CtrlStyle" vt="Int32">1342374016</property>
 				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_ZoomBucks">
+			<properties>
+				<property name="Left" vt="Int8">8</property>
+				<property name="Top" vt="Int8">8</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">ZoomBucks</property>
+				<property name="TabOrder" vt="Int8">1</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_SwagBucks">
+			<properties>
+				<property name="Left" vt="Int8">8</property>
+				<property name="Top" vt="Int8">88</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">SwagBucks</property>
+				<property name="TabOrder" vt="Int8">4</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_PrizeRebel">
+			<properties>
+				<property name="Left" vt="Int8">8</property>
+				<property name="Top" vt="Int16">168</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">PrizeRebel</property>
+				<property name="TabOrder" vt="Int8">7</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_GiftHulk">
+			<properties>
+				<property name="Left" vt="Int16">232</property>
+				<property name="Top" vt="Int16">168</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">GiftHulk</property>
+				<property name="TabOrder" vt="Int8">16</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_iRazoo">
+			<properties>
+				<property name="Left" vt="Int16">232</property>
+				<property name="Top" vt="Int8">88</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">iRazoo</property>
+				<property name="TabOrder" vt="Int8">13</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TACheckbox" name="CHECK_PaidVert">
+			<properties>
+				<property name="Left" vt="Int16">232</property>
+				<property name="Top" vt="Int8">8</property>
+				<property name="Width" vt="Int8">121</property>
+				<property name="Height" vt="Int8">17</property>
+				<property name="Caption" vt="String">PaidVert</property>
+				<property name="TabOrder" vt="Int8">10</property>
+				<property name="CtrlStyle" vt="Int32">1342242819</property>
+				<property name="CtrlExStyle" vt="Int8">0</property>
 				<property name="Resizing" vt="Set">DockHeight</property>
 			</properties>
 			<components/>
