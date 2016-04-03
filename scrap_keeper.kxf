@@ -49,7 +49,7 @@
 			<properties>
 				<property name="Left" vt="Int8">24</property>
 				<property name="Top" vt="Int16">264</property>
-				<property name="Width" vt="Int16">132</property>
+				<property name="Width" vt="Int8">100</property>
 				<property name="Height" vt="Int8">17</property>
 				<property name="Caption" vt="String">Reset every X hours</property>
 				<property name="TabOrder" vt="Int8">19</property>
@@ -158,69 +158,13 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TAInput" name="USER_PaidVert">
+		<object type="TAInput" name="USER_GiftHulk">
 			<properties>
 				<property name="Left" vt="Int16">248</property>
 				<property name="Top" vt="Int8">32</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">11</property>
-				<property name="Text" vt="String">USER_PaidVert</property>
-				<property name="CtrlStyle" vt="Int32">1342374016</property>
-				<property name="CtrlExStyle" vt="Int16">512</property>
-				<property name="Resizing" vt="Set">DockHeight</property>
-			</properties>
-			<components/>
-		</object>
-		<object type="TAInput" name="PASS_PaidVert">
-			<properties>
-				<property name="Left" vt="Int16">248</property>
-				<property name="Top" vt="Int8">56</property>
-				<property name="Width" vt="Int16">169</property>
-				<property name="Height" vt="Int8">21</property>
-				<property name="TabOrder" vt="Int8">12</property>
-				<property name="Text" vt="String">PASS_PaidVert</property>
-				<property name="CtrlStyle" vt="Int32">1342374016</property>
-				<property name="CtrlExStyle" vt="Int16">512</property>
-				<property name="Resizing" vt="Set">DockHeight</property>
-			</properties>
-			<components/>
-		</object>
-		<object type="TAInput" name="USER_iRazoo">
-			<properties>
-				<property name="Left" vt="Int16">248</property>
-				<property name="Top" vt="Int8">112</property>
-				<property name="Width" vt="Int16">169</property>
-				<property name="Height" vt="Int8">21</property>
-				<property name="TabOrder" vt="Int8">14</property>
-				<property name="Text" vt="String">USER_iRazoo</property>
-				<property name="CtrlStyle" vt="Int32">1342374016</property>
-				<property name="CtrlExStyle" vt="Int16">512</property>
-				<property name="Resizing" vt="Set">DockHeight</property>
-			</properties>
-			<components/>
-		</object>
-		<object type="TAInput" name="PASS_iRazoo">
-			<properties>
-				<property name="Left" vt="Int16">248</property>
-				<property name="Top" vt="Int16">136</property>
-				<property name="Width" vt="Int16">169</property>
-				<property name="Height" vt="Int8">21</property>
-				<property name="TabOrder" vt="Int8">15</property>
-				<property name="Text" vt="String">PASS_iRazoo</property>
-				<property name="CtrlStyle" vt="Int32">1342374016</property>
-				<property name="CtrlExStyle" vt="Int16">512</property>
-				<property name="Resizing" vt="Set">DockHeight</property>
-			</properties>
-			<components/>
-		</object>
-		<object type="TAInput" name="USER_GiftHulk">
-			<properties>
-				<property name="Left" vt="Int16">248</property>
-				<property name="Top" vt="Int16">192</property>
-				<property name="Width" vt="Int16">169</property>
-				<property name="Height" vt="Int8">21</property>
-				<property name="TabOrder" vt="Int8">17</property>
 				<property name="Text" vt="String">USER_GiftHulk</property>
 				<property name="CtrlStyle" vt="Int32">1342374016</property>
 				<property name="CtrlExStyle" vt="Int16">512</property>
@@ -231,11 +175,67 @@
 		<object type="TAInput" name="PASS_GiftHulk">
 			<properties>
 				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int8">56</property>
+				<property name="Width" vt="Int16">169</property>
+				<property name="Height" vt="Int8">21</property>
+				<property name="TabOrder" vt="Int8">12</property>
+				<property name="Text" vt="String">PASS_GiftHulk</property>
+				<property name="CtrlStyle" vt="Int32">1342374016</property>
+				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAInput" name="USER_LootPalace">
+			<properties>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int8">112</property>
+				<property name="Width" vt="Int16">169</property>
+				<property name="Height" vt="Int8">21</property>
+				<property name="TabOrder" vt="Int8">14</property>
+				<property name="Text" vt="String">USER_LootPalace</property>
+				<property name="CtrlStyle" vt="Int32">1342374016</property>
+				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAInput" name="PASS_LootPalace">
+			<properties>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int16">136</property>
+				<property name="Width" vt="Int16">169</property>
+				<property name="Height" vt="Int8">21</property>
+				<property name="TabOrder" vt="Int8">15</property>
+				<property name="Text" vt="String">PASS_LootPalace</property>
+				<property name="CtrlStyle" vt="Int32">1342374016</property>
+				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAInput" name="USER_instaGC">
+			<properties>
+				<property name="Left" vt="Int16">248</property>
+				<property name="Top" vt="Int16">192</property>
+				<property name="Width" vt="Int16">169</property>
+				<property name="Height" vt="Int8">21</property>
+				<property name="TabOrder" vt="Int8">17</property>
+				<property name="Text" vt="String">USER_instaGC</property>
+				<property name="CtrlStyle" vt="Int32">1342374016</property>
+				<property name="CtrlExStyle" vt="Int16">512</property>
+				<property name="Resizing" vt="Set">DockHeight</property>
+			</properties>
+			<components/>
+		</object>
+		<object type="TAInput" name="PASS_instaGC">
+			<properties>
+				<property name="Left" vt="Int16">248</property>
 				<property name="Top" vt="Int16">216</property>
 				<property name="Width" vt="Int16">169</property>
 				<property name="Height" vt="Int8">21</property>
 				<property name="TabOrder" vt="Int8">18</property>
-				<property name="Text" vt="String">PASS_GiftHulk</property>
+				<property name="Text" vt="String">PASS_instaGC</property>
 				<property name="CtrlStyle" vt="Int32">1342374016</property>
 				<property name="CtrlExStyle" vt="Int16">512</property>
 				<property name="Resizing" vt="Set">DockHeight</property>
@@ -284,13 +284,13 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TACheckbox" name="CHECK_GiftHulk">
+		<object type="TACheckbox" name="CHECK_instaGC">
 			<properties>
 				<property name="Left" vt="Int16">232</property>
 				<property name="Top" vt="Int16">168</property>
 				<property name="Width" vt="Int8">121</property>
 				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">GiftHulk</property>
+				<property name="Caption" vt="String">instaGC</property>
 				<property name="TabOrder" vt="Int8">16</property>
 				<property name="CtrlStyle" vt="Int32">1342242819</property>
 				<property name="CtrlExStyle" vt="Int8">0</property>
@@ -298,13 +298,13 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TACheckbox" name="CHECK_iRazoo">
+		<object type="TACheckbox" name="CHECK_LootPalace">
 			<properties>
 				<property name="Left" vt="Int16">232</property>
 				<property name="Top" vt="Int8">88</property>
 				<property name="Width" vt="Int8">121</property>
 				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">iRazoo</property>
+				<property name="Caption" vt="String">LootPalace</property>
 				<property name="TabOrder" vt="Int8">13</property>
 				<property name="CtrlStyle" vt="Int32">1342242819</property>
 				<property name="CtrlExStyle" vt="Int8">0</property>
@@ -312,13 +312,13 @@
 			</properties>
 			<components/>
 		</object>
-		<object type="TACheckbox" name="CHECK_PaidVert">
+		<object type="TACheckbox" name="CHECK_GiftHulk">
 			<properties>
 				<property name="Left" vt="Int16">232</property>
 				<property name="Top" vt="Int8">8</property>
 				<property name="Width" vt="Int8">121</property>
 				<property name="Height" vt="Int8">17</property>
-				<property name="Caption" vt="String">PaidVert</property>
+				<property name="Caption" vt="String">GiftHulk</property>
 				<property name="TabOrder" vt="Int8">10</property>
 				<property name="CtrlStyle" vt="Int32">1342242819</property>
 				<property name="CtrlExStyle" vt="Int8">0</property>
