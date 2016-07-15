@@ -212,7 +212,7 @@ Func _Seconds2Time($seconds)
 EndFunc   ;==>_Seconds2Time
 
 Func _ReadLogin($section)
-	Assign('CHECK_' & $section, IniRead($INI, $section, 'check', $GUI_CHECKED), 2)
+	Assign('CHECK_' & $section, IniRead($INI, $section, 'check', $GUI_UNCHECKED), 2)
 	Assign('USER_' & $section, IniRead($INI, $section, 'user', ''), 2)
 	Assign('PASS_' & $section, IniRead($INI, $section, 'pass', ''), 2)
 EndFunc   ;==>_ReadLogin
