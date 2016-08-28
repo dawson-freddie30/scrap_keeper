@@ -30,32 +30,22 @@ _ReadLogin('PedToClick')
 
 _DeleteLogin('LootPalace')
 _DeleteLogin('instaGC')
+_DeleteLogin('PaidVert')
+_DeleteLogin('iRazoo')
 
 _DoGUI()
 
 Func _DoGUI()
-	Local $gui = GUICreate("Scrap Keeper", 432, 328, 212, 150)
-	Local $buttonGo = GUICtrlCreateButton("Go", 288, 280, 75, 25)
+	Local $gui = GUICreate("Scrap Keeper", 275, 153, 252, 145)
+	Local $buttonGo = GUICtrlCreateButton("Go", 176, 112, 75, 25)
 	Local $_check_ZoomBucks = GUICtrlCreateCheckbox("ZoomBucks", 8, 8, 121, 17)
-	$USER_ZoomBucks = GUICtrlCreateInput($USER_ZoomBucks, 24, 32, 177, 21)
-	$PASS_ZoomBucks = GUICtrlCreateInput($PASS_ZoomBucks, 24, 56, 177, 21)
-	Local $_check_SwagBucks = GUICtrlCreateCheckbox("SwagBucks", 8, 88, 121, 17)
-	$USER_SwagBucks = GUICtrlCreateInput($USER_SwagBucks, 24, 112, 169, 21)
-	$PASS_SwagBucks = GUICtrlCreateInput($PASS_SwagBucks, 24, 136, 169, 21)
-	Local $_check_PrizeRebel = GUICtrlCreateCheckbox("PrizeRebel", 8, 168, 121, 17)
-	$USER_PrizeRebel = GUICtrlCreateInput($USER_PrizeRebel, 24, 192, 169, 21)
-	$PASS_PrizeRebel = GUICtrlCreateInput($PASS_PrizeRebel, 24, 216, 169, 21)
-	Local $_check_GiftHulk = GUICtrlCreateCheckbox("GiftHulk", 232, 8, 121, 17)
-	$USER_GiftHulk = GUICtrlCreateInput($USER_GiftHulk, 248, 32, 169, 21)
-	$PASS_GiftHulk = GUICtrlCreateInput($PASS_GiftHulk, 248, 56, 169, 21)
-	Local $_check_InboxDollars = GUICtrlCreateCheckbox("InboxDollars", 232, 88, 121, 17)
-	$USER_InboxDollars = GUICtrlCreateInput($USER_InboxDollars, 248, 112, 169, 21)
-	$PASS_InboxDollars = GUICtrlCreateInput($PASS_InboxDollars, 248, 136, 169, 21)
-	Local $_check_PedToClick = GUICtrlCreateCheckbox("PedToClick", 232, 168, 121, 17)
-	$USER_PedToClick = GUICtrlCreateInput($USER_PedToClick, 248, 192, 169, 21)
-	$PASS_PedToClick = GUICtrlCreateInput($PASS_PedToClick, 248, 216, 169, 21)
-	GUICtrlCreateLabel("Reset every X hours", 24, 264, 132, 17)
-	$DELAY = GUICtrlCreateInput($DELAY, 24, 288, 41, 21)
+	Local $_check_SwagBucks = GUICtrlCreateCheckbox("SwagBucks", 8, 32, 121, 17)
+	Local $_check_PrizeRebel = GUICtrlCreateCheckbox("PrizeRebel", 8, 56, 121, 17)
+	Local $_check_GiftHulk = GUICtrlCreateCheckbox("GiftHulk", 152, 8, 121, 17)
+	Local $_check_InboxDollars = GUICtrlCreateCheckbox("InboxDollars", 152, 32, 121, 17)
+	Local $_check_PedToClick = GUICtrlCreateCheckbox("PedToClick", 152, 56, 121, 17)
+	GUICtrlCreateLabel("Reset every X hours", 24, 96, 100, 17)
+	$DELAY = GUICtrlCreateInput($DELAY, 24, 120, 41, 21)
 	GUISetState(@SW_SHOW)
 
 	GUICtrlSetState($_check_ZoomBucks, $CHECK_ZoomBucks)
@@ -174,15 +164,9 @@ Func _SendDelayed($DELAY, $keys, $raw = 0)
 EndFunc   ;==>_SendDelayed
 
 Func _SendLogin($section)
-	Local $user = Eval('USER_' & $section)
-	Local $pass = Eval('PASS_' & $section)
-
-	If Eval('CHECK_' & $section) = $GUI_CHECKED And $user <> '' And $pass <> '' Then
+	If Eval('CHECK_' & $section) = $GUI_CHECKED Then
 		_SendDelayed(500, '{TAB}')
-		_SendDelayed(10, $user, 1)
 		_SendDelayed(500, '{TAB}')
-		_SendDelayed(10, $pass, 1)
-		;_SendDelayed(500, '{TAB}')
 		_SendDelayed(250, '{TAB}')
 		_SendDelayed(250, '{ENTER}')
 		Sleep(3000)
@@ -216,23 +200,23 @@ EndFunc   ;==>_Seconds2Time
 
 Func _ReadLogin($section)
 	Assign('CHECK_' & $section, IniRead($INI, $section, 'check', $GUI_UNCHECKED), 2)
-	Assign('USER_' & $section, IniRead($INI, $section, 'user', ''), 2)
-	Assign('PASS_' & $section, IniRead($INI, $section, 'pass', ''), 2)
+	_CleanupLogin($section)
 EndFunc   ;==>_ReadLogin
 
 Func _WriteLogin($section, $checkCtrl)
 	Assign('CHECK_' & $section, GUICtrlRead($checkCtrl), 4)
-	Assign('USER_' & $section, GUICtrlRead(Eval('USER_' & $section)), 4)
-	Assign('PASS_' & $section, GUICtrlRead(Eval('PASS_' & $section)), 4)
 
 	IniWrite($INI, $section, 'check', Eval('CHECK_' & $section))
-	IniWrite($INI, $section, 'user', Eval('USER_' & $section))
-	IniWrite($INI, $section, 'pass', Eval('PASS_' & $section))
 EndFunc   ;==>_WriteLogin
 
 Func _DeleteLogin($section)
 	IniDelete($INI, $section)
 EndFunc   ;==>_DeleteLogin
+
+Func _CleanupLogin($section)
+	IniDelete($INI, $section, 'user')
+	IniDelete($INI, $section, 'pass')
+EndFunc   ;==>_CleanupLogin
 
 Func _Tray_Exit()
 	_ClearScrap()
